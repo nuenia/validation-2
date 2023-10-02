@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <form action="" method="POST" class="form" id="form-2">
+            <h3 class="heading">Thành viên đăng ký</h3>
+            <p class="desc">Cùng học lập trình tại F8 ❤️</p>
+
+            <div class="spacer"></div>
+
+            <div class="form-group">
+                <label for="fullname" class="form-label">Tên đầy đủ</label>
+                <input type="text" id="fullname" rules="required" name="fullname" placeholder="VD: Quang Nha" class="form-control">
+                <span class="form-message"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="email" class="form-label">Email</label>
+                <input type="text" id="email" rules="required|email" name="email" placeholder="VD: email@gmail.com" class="form-control">
+                <span class="form-message"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="password" class="form-label">Mật khẩu</label>
+                <input type="password" id="password" rules="required|min:6" name="password" placeholder="VD: Nhập mật khẩu" class="form-control">
+                <span class="form-message"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="password-confirmation" class="form-label">Nhập lại mật khẩu</label>
+                <input type="password" id="password-confirmation" rules="required|min:6" name="password-confirmation" placeholder="VD: Nhập lại mật khẩu" class="form-control">
+                <span class="form-message"></span>
+            </div>
+
+            <button class="form-submit">ĐĂNG KÝ</button>
+
+            <script src="./validation-2.js"></script>
+            <script>
+                //điều chúng ta mong muốn
+            var form = new Validator('#form-2')
+
+            form.onSubmit = function(formData) {
+                console.log(formData)
+            }
+            </script>
+        </form>
+    </div>
+</body>
+</html>
